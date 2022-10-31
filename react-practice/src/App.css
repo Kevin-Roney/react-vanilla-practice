@@ -1,12 +1,15 @@
 .App {
+  height: 100vh;
   text-align: center;
-  height: 400px;
-  width: 400px;
-  background-color: yellow;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+input {
+  display: block;
+  margin: 5px;
 }
 
 .button {

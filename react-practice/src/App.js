@@ -1,13 +1,36 @@
 import './App.css';
 import Button from './components/Button';
+import { useState } from 'react';
 
 function App() {
-  const list = ['dog', 'cat', 'bird', 'fish'];
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+  });
+  function handleClick() {
+    alert(`Hello ${formData.firstName} ${formData.lastName}`);
+  }
   return (
     <div className='App'>
-      {list.map((item, i) => (
-        <Button key={i} text={item} />
-      ))}
+      <form onSubmit={handleClick}>
+        <input
+          onChange={(e) =>
+            setFormData({
+              firstName: e.target.value,
+              lastName: formData.lastName,
+            })
+          }
+        ></input>
+        <input
+          onChange={(e) =>
+            setFormData({
+              firstName: formData.firstName,
+              lastName: e.target.value,
+            })
+          }
+        ></input>
+        <button>Greet Me</button>
+      </form>
     </div>
   );
 }
