@@ -2,6 +2,7 @@
   height: 100vh;
   text-align: center;
   display: flex;
+  background: teal;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -10,6 +11,18 @@
 input {
   display: block;
   margin: 5px;
+}
+
+.joke-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.joke {
+  margin: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
 }
 
 .button {
